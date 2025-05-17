@@ -13,7 +13,7 @@ device: 0
 rnd: 10
 bs: 32
 epoch: 1
-lr: 0.001
+lr: 0.05
 gamma: 0.99
 optim: sgd
 valid_gap: 1
@@ -34,7 +34,5 @@ meta_lr: 0.001
 meta_weight_decay: 0.0001
 meta_p: 30
 meta_net_hidden_size: 500
-wdb: <wandb.sdk.wandb_run.Run object at 0x7f4aea9e9130>
-output: <_io.TextIOWrapper name='./exps/CIFAR1000/full_l2w/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.001_l2w.txt' mode='a' encoding='UTF-8'>
-========== Round 0 ==========
-accuracy: 36.09, exits:['2.36', '11.18', '59.76', '71.08'] loss: 10.88
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f9287d4a1f0>
+output: <_io.TextIOWrapper name='./exps/CIFAR1000/full_l2w/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.05_l2w.txt' mode='a' encoding='UTF-8'>

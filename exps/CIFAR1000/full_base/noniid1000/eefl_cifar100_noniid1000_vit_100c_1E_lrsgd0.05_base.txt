@@ -1,0 +1,33 @@
+alg: eefl
+policy: base
+dataset: cifar100_noniid1000
+model: vit
+config_path: models/facebook/deit-tiny-patch16-224
+ft: full
+load_path: 
+seed: 1117
+total_num: 100
+sr: 0.3
+suffix: exps/CIFAR1000/full_base/noniid1000
+device: 3
+rnd: 10
+bs: 32
+epoch: 1
+lr: 0.05
+gamma: 0.99
+optim: sgd
+valid_gap: 1
+eq_ratios: (0.25, 0.25, 0.25, 0.25)
+eq_depths: (3, 6, 9, 12)
+multi_exit: False
+toy: False
+if_mode: all
+cosine: False
+valid_ratio: 0.2
+eval_models_dir: script/0818-1e-1
+eval_test: False
+noise: -1
+hidden_dim: -1
+T: 3
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f4273e8ccd0>
+output: <_io.TextIOWrapper name='./exps/CIFAR1000/full_base/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.05_base.txt' mode='a' encoding='UTF-8'>

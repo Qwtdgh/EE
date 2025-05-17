@@ -201,7 +201,7 @@ if __name__ == '__main__':
     args = args_parser()
     suffix = args.suffix.replace('/', '_')
     
-    wdb = wandb.init(project=suffix, name=f"{args.alg}")
+    wdb = wandb.init(project=f"{args.dataset}", name=f"{args.ft}_{args.policy}")
     args.wdb = wdb
 
     seed = args.seed
