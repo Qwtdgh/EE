@@ -1,16 +1,16 @@
 alg: eefl
 policy: boosted
-dataset: cifar100_noniid1000
-model: vit
-config_path: models/facebook/deit-tiny-patch16-224
+dataset: qnli
+model: bert
+config_path: models/google-bert/bert-12-128-uncased
 ft: full
 load_path: 
 seed: 1117
 total_num: 100
-sr: 0.3
-suffix: exps/CIFAR1000/full_boosted/noniid1000
+sr: 0.1
+suffix: exps/GLUE/full_boosted/qnli
 device: 1
-rnd: 10
+rnd: 500
 bs: 32
 epoch: 1
 lr: 0.05
@@ -30,5 +30,5 @@ noise: -1
 hidden_dim: -1
 T: 3
 ensemble_weight: 0.2
-wdb: <wandb.sdk.wandb_run.Run object at 0x7fe39bff3100>
-output: <_io.TextIOWrapper name='./exps/CIFAR1000/full_boosted/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.05_boosted.txt' mode='a' encoding='UTF-8'>
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f8e0dedf6d0>
+output: <_io.TextIOWrapper name='./exps/GLUE/full_boosted/qnli/eefl_qnli_bert_100c_1E_lrsgd0.05_boosted.txt' mode='a' encoding='UTF-8'>

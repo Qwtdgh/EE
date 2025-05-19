@@ -1,0 +1,63 @@
+alg: eefl
+policy: l2w
+dataset: cifar100_noniid1000
+model: vit
+config_path: models/facebook/deit-tiny-patch16-224
+ft: lora
+load_path: 
+seed: 1117
+total_num: 100
+sr: 0.3
+suffix: exps/CIFAR_1000/lora_l2w/noniid1000
+device: 2
+rnd: 10
+bs: 32
+epoch: 1
+lr: 0.01
+gamma: 0.99
+optim: sgd
+valid_gap: 1
+eq_ratios: (0.25, 0.25, 0.25, 0.25)
+eq_depths: (3, 6, 9, 12)
+multi_exit: False
+toy: False
+if_mode: all
+cosine: False
+valid_ratio: 0.2
+eval_models_dir: script/0818-1e-1
+eval_test: False
+noise: -1
+hidden_dim: -1
+T: 3
+meta_gap: 1
+meta_lr: 0.0001
+meta_weight_decay: 0.0001
+meta_p: 30
+meta_net_hidden_size: 500
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f88422a1760>
+output: <_io.TextIOWrapper name='./exps/CIFAR_1000/lora_l2w/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.01_l2w.txt' mode='a' encoding='UTF-8'>
+========== Round 0 ==========
+accuracy: 40.90, exits:['7.13', '39.55', '54.86', '62.06'] loss: 9.94
+========== Round 1 ==========
+accuracy: 47.84, exits:['20.10', '46.33', '60.00', '64.91'] loss: 8.70
+========== Round 2 ==========
+accuracy: 50.41, exits:['26.67', '50.64', '59.44', '64.88'] loss: 8.61
+========== Round 3 ==========
+accuracy: 52.09, exits:['29.25', '51.36', '62.46', '65.28'] loss: 8.20
+========== Round 4 ==========
+accuracy: 48.14, exits:['28.19', '46.90', '58.05', '59.42'] loss: 8.38
+========== Round 5 ==========
+accuracy: 51.10, exits:['30.09', '52.03', '60.68', '61.62'] loss: 8.52
+========== Round 6 ==========
+accuracy: 48.29, exits:['31.02', '47.59', '56.69', '57.85'] loss: 8.52
+========== Round 7 ==========
+accuracy: 49.73, exits:['31.07', '49.93', '57.92', '60.01'] loss: 8.50
+========== Round 8 ==========
+accuracy: 46.76, exits:['29.21', '45.41', '54.86', '57.55'] loss: 8.40
+========== Round 9 ==========
+accuracy: 50.66, exits:['30.87', '51.01', '59.28', '61.47'] loss: 8.50
+==========Summary==========
+max accuracy: 52.09
+final accuracy: 48.71 +- 0.00
+Anytime:
+[29.98, 52.46, 60.93, 64.53], avg:51.975

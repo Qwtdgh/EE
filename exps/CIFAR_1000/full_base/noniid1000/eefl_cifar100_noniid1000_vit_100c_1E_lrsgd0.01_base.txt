@@ -1,0 +1,95 @@
+alg: eefl
+policy: base
+dataset: cifar100_noniid1000
+model: vit
+config_path: models/facebook/deit-tiny-patch16-224
+ft: full
+load_path: 
+seed: 1117
+total_num: 100
+sr: 0.3
+suffix: exps/CIFAR_1000/full_base/noniid1000
+device: 0
+rnd: 10
+bs: 32
+epoch: 1
+lr: 0.01
+gamma: 0.99
+optim: sgd
+valid_gap: 1
+eq_ratios: (0.25, 0.25, 0.25, 0.25)
+eq_depths: (3, 6, 9, 12)
+multi_exit: False
+toy: False
+if_mode: all
+cosine: False
+valid_ratio: 0.2
+eval_models_dir: script/0818-1e-1
+eval_test: False
+noise: -1
+hidden_dim: -1
+T: 3
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f5816b66100>
+output: <_io.TextIOWrapper name='./exps/CIFAR_1000/full_base/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.01_base.txt' mode='a' encoding='UTF-8'>
+========== Round 0 ==========
+accuracy: 39.32, exits:['25.43', '38.15', '45.28', '48.41'] loss: 11.36
+========== Round 1 ==========
+accuracy: 48.03, exits:['33.46', '47.63', '54.30', '56.72'] loss: 8.10
+alg: eefl
+policy: base
+dataset: cifar100_noniid1000
+model: vit
+config_path: models/facebook/deit-tiny-patch16-224
+ft: full
+load_path: 
+seed: 1117
+total_num: 100
+sr: 0.3
+suffix: exps/CIFAR_1000/full_base/noniid1000
+device: 0
+rnd: 10
+bs: 32
+epoch: 1
+lr: 0.01
+gamma: 0.99
+optim: sgd
+valid_gap: 1
+eq_ratios: (0.25, 0.25, 0.25, 0.25)
+eq_depths: (3, 6, 9, 12)
+multi_exit: False
+toy: False
+if_mode: all
+cosine: False
+valid_ratio: 0.2
+eval_models_dir: script/0818-1e-1
+eval_test: False
+noise: -1
+hidden_dim: -1
+T: 3
+wdb: <wandb.sdk.wandb_run.Run object at 0x7fe6cb9216d0>
+output: <_io.TextIOWrapper name='./exps/CIFAR_1000/full_base/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.01_base.txt' mode='a' encoding='UTF-8'>
+========== Round 0 ==========
+accuracy: 39.32, exits:['25.43', '38.15', '45.28', '48.41'] loss: 11.36
+========== Round 1 ==========
+accuracy: 48.03, exits:['33.46', '47.63', '54.30', '56.72'] loss: 8.10
+========== Round 2 ==========
+accuracy: 52.02, exits:['38.16', '51.56', '58.25', '60.12'] loss: 6.85
+========== Round 3 ==========
+accuracy: 52.59, exits:['38.37', '52.75', '58.52', '60.71'] loss: 6.04
+========== Round 4 ==========
+accuracy: 54.59, exits:['39.63', '54.95', '60.52', '63.28'] loss: 5.36
+========== Round 5 ==========
+accuracy: 54.26, exits:['40.89', '54.32', '59.68', '62.13'] loss: 4.82
+========== Round 6 ==========
+accuracy: 56.38, exits:['43.53', '56.69', '61.63', '63.69'] loss: 4.30
+========== Round 7 ==========
+accuracy: 57.86, exits:['45.64', '57.82', '62.92', '65.05'] loss: 3.89
+========== Round 8 ==========
+accuracy: 56.18, exits:['44.29', '56.57', '60.81', '63.04'] loss: 3.47
+========== Round 9 ==========
+accuracy: 56.91, exits:['45.58', '56.77', '61.78', '63.51'] loss: 3.09
+==========Summary==========
+max accuracy: 57.86
+final accuracy: 56.54 +- 0.00
+Anytime:
+[45.16, 57.38, 62.95, 65.23], avg:57.68000000000001

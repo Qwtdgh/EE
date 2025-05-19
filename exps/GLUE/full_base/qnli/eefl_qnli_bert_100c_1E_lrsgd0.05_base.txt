@@ -1,0 +1,33 @@
+alg: eefl
+policy: base
+dataset: qnli
+model: bert
+config_path: models/google-bert/bert-12-128-uncased
+ft: full
+load_path: 
+seed: 1117
+total_num: 100
+sr: 0.1
+suffix: exps/GLUE/full_base/qnli
+device: 0
+rnd: 500
+bs: 32
+epoch: 1
+lr: 0.05
+gamma: 0.99
+optim: sgd
+valid_gap: 1
+eq_ratios: (0.25, 0.25, 0.25, 0.25)
+eq_depths: (3, 6, 9, 12)
+multi_exit: False
+toy: False
+if_mode: all
+cosine: False
+valid_ratio: 0.2
+eval_models_dir: script/0818-1e-1
+eval_test: False
+noise: -1
+hidden_dim: -1
+T: 3
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f22872a8b80>
+output: <_io.TextIOWrapper name='./exps/GLUE/full_base/qnli/eefl_qnli_bert_100c_1E_lrsgd0.05_base.txt' mode='a' encoding='UTF-8'>

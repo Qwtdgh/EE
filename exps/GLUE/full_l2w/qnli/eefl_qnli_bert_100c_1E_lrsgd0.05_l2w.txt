@@ -1,16 +1,16 @@
 alg: eefl
 policy: l2w
-dataset: cifar100_noniid1000
-model: vit
-config_path: models/facebook/deit-tiny-patch16-224
+dataset: qnli
+model: bert
+config_path: models/google-bert/bert-12-128-uncased
 ft: full
 load_path: 
 seed: 1117
 total_num: 100
-sr: 0.3
-suffix: exps/CIFAR1000/full_l2w/noniid1000
-device: 0
-rnd: 10
+sr: 0.1
+suffix: exps/GLUE/full_l2w/qnli
+device: 3
+rnd: 500
 bs: 32
 epoch: 1
 lr: 0.05
@@ -29,10 +29,10 @@ eval_test: False
 noise: -1
 hidden_dim: -1
 T: 3
-meta_gap: 10
-meta_lr: 0.001
+meta_gap: 1
+meta_lr: 0.0001
 meta_weight_decay: 0.0001
 meta_p: 30
 meta_net_hidden_size: 500
-wdb: <wandb.sdk.wandb_run.Run object at 0x7f9287d4a1f0>
-output: <_io.TextIOWrapper name='./exps/CIFAR1000/full_l2w/noniid1000/eefl_cifar100_noniid1000_vit_100c_1E_lrsgd0.05_l2w.txt' mode='a' encoding='UTF-8'>
+wdb: <wandb.sdk.wandb_run.Run object at 0x7f0f3ace2160>
+output: <_io.TextIOWrapper name='./exps/GLUE/full_l2w/qnli/eefl_qnli_bert_100c_1E_lrsgd0.05_l2w.txt' mode='a' encoding='UTF-8'>
